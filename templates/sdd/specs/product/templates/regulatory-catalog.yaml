@@ -1,0 +1,29 @@
+# Optional template. Copy to specs/product/domain/regulatory-decisions.yaml
+# when product rules depend on changing external criteria.
+# Use the product language selected in the documentation policy for descriptions.
+# Add existing rule links relative to the destination file.
+# Use null for unknown dates; never invent evidence.
+schema_version: 1
+decisions: []
+# Entry shape:
+# - id: REG-001
+#   title: <criterion>
+#   jurisdiction: <territorial or organizational scope>
+#   applicability: <applicable cases>
+#   effective_from: null
+#   effective_until: null
+#   official_sources:
+#     - title: <official source>
+#       url: <URL>
+#       publication_date: null
+#       reviewed_on: null
+#   affected_rules: []
+#   review:
+#     status: pending  # pending | reviewed | needs-review
+#     owner: null
+#     evidence: null
+#     next_review_on: null
+#   implementation:
+#     status: not-assessed  # not-assessed | planned | implemented | verified
+#     profile_evidence: []
+#   pending_items: []

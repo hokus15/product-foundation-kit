@@ -1,0 +1,54 @@
+name: Prepare kit release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: kit-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  draft-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ github.ref_name }}
+    steps:
+      - name: Check out the tagged revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Test release tooling
+        run: python -B -m unittest discover -s tests -v
+
+      - name: Prepare archive, checksum, and notes
+        run: python scripts/prepare_release.py --tag "$RELEASE_TAG" --output-dir dist
+
+      - name: Create draft with all assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          flags=()
+          if [[ "$RELEASE_TAG" == *-* ]]; then
+            flags+=(--prerelease)
+          fi
+          gh release create "$RELEASE_TAG" \
+            "dist/product-foundation-kit-${RELEASE_TAG}.zip" \
+            "dist/product-foundation-kit-${RELEASE_TAG}.zip.sha256" \
+            --verify-tag \
+            --draft \
+            --title "Product Foundation Kit ${RELEASE_TAG}" \
+            --notes-file dist/release-notes.md \
+            "${flags[@]}"

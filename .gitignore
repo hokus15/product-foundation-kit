@@ -1,0 +1,21 @@
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local scratch material
+.cache/
+tmp/
+*.log
+
+# Maintainer release outputs and Python caches
+dist/
+__pycache__/
+*.pyc
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
