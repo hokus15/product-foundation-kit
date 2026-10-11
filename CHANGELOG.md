@@ -6,6 +6,8 @@ This file records kit changes for release consumers. Versions follow [the versio
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-10-11
+
 ### Added
 
 - A repository contribution procedure for people and AI assistants, with actions and completion criteria for branches, changes, commits, changelog review, PR updates, release verification, and Dependabot updates, independent of the editor or Git client.
@@ -17,6 +19,13 @@ This change adds repository maintenance guidance. The kit's method, canonical sc
 ### Migration
 
 Existing projects require no migration or conversion of generated artifacts.
+
+### Commit summary
+
+#### Documentation
+
+- docs(contributing): add repository contribution procedure (#3) ([b65afc4](https://github.com/hokus15/product-foundation-kit/commit/b65afc4304b009e319e74e50bd114f3d8596a333)).
+
 
 ## [0.1.1] - 2026-10-11
 
