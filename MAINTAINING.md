@@ -2,6 +2,8 @@
 
 The kit distributes a complete project conversation method and canonical authoring schemas, starting with PM and supporting SDD, implementation, verification, release, and outcome review.
 
+For the procedure from starting a change through PR review and release verification, follow [Working on Product Foundation Kit](CONTRIBUTING.md). This document defines the maintenance and publication procedures used by that guide.
+
 ## Maintain the route and resources
 
 Keep documentation in English and project choices unselected in source templates. Initiative facts, credentials, implementation configuration, and execution evidence belong to generated projects.
