@@ -1,0 +1,21 @@
+{%- set previous = (ctx.prev_changelog_file | read_file).replace('\r\n', '\n') -%}
+{%- set parts = previous.split('## [Unreleased]\n', 1) -%}
+{%- set sections = parts[1].split('\n## [', 1) -%}
+{%- set pending = sections[0].strip() -%}
+{%- set history = ('## [' ~ sections[1]) if sections | length > 1 else '' -%}
+{%- set version, release = ctx.history.released.items() | first -%}
+{%- set heading = '## [' ~ version ~ '] - ' -%}
+{%- if history.startswith(heading) -%}
+{{ previous }}
+{%- else -%}
+{{ parts[0] ~ '## [Unreleased]\n\n' ~ heading ~ release.tagged_date.strftime('%Y-%m-%d') ~ '\n\n' ~ pending }}
+
+### Commit summary
+{% for kind, commits in release.elements | dictsort %}
+#### {{ kind | capitalize }}
+{% for commit in commits %}
+- {{ commit.message.split('\n')[0] | e }} ([{{ commit.short_hash }}]({{ commit.hexsha | commit_hash_url }})).
+{% endfor %}
+{% endfor %}
+{{ history }}
+{%- endif %}

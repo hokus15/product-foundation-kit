@@ -10,11 +10,6 @@
 tmp/
 *.log
 
-# Maintainer release outputs and Python caches
-dist/
-__pycache__/
-*.pyc
-
 # Operating system files
 .DS_Store
 Thumbs.db
