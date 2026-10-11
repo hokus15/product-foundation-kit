@@ -1,0 +1,25 @@
+[semantic_release]
+commit_parser = "conventional"
+tag_format = "v{version}"
+allow_zero_version = true
+major_on_zero = false
+add_partial_tags = false
+commit_message = "docs(release): publish {version} [skip ci]"
+
+[semantic_release.branches.main]
+match = "^main$"
+prerelease = false
+
+[semantic_release.commit_parser_options]
+minor_tags = ["feat"]
+patch_tags = ["fix", "docs", "style", "refactor", "perf", "test", "build", "ci"]
+other_allowed_tags = []
+allowed_tags = ["fix", "feat", "docs", "style", "refactor", "perf", "test", "build", "ci"]
+parse_squash_commits = false
+
+[semantic_release.changelog]
+template_dir = ".github/release-templates"
+exclude_commit_patterns = ['^docs\(release\): publish .* \[skip ci\]']
+
+[semantic_release.remote]
+type = "github"

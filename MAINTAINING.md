@@ -28,38 +28,24 @@ Release migration notes must identify applicable source versions, changed contra
 
 ## Prepare and publish a release
 
-The GitHub distribution targets [hokus15/product-foundation-kit](https://github.com/hokus15/product-foundation-kit), with drafts and published versions under [Releases](https://github.com/hokus15/product-foundation-kit/releases). It uses [.github/workflows/release.yml](.github/workflows/release.yml). Pushing one `v*` tag triggers preparation of a draft release. It does not publish automatically. The workflow packages the tagged commit and uses its dated [changelog](CHANGELOG.md) entry for notes. GitHub's default `GITHUB_TOKEN` needs `contents: write`; no additional secret is required. The workflow derives the repository from the GitHub execution context, so no owner or repository name needs to be hardcoded in its configuration.
+The GitHub distribution targets [hokus15/product-foundation-kit](https://github.com/hokus15/product-foundation-kit). [.github/workflows/release.yml](.github/workflows/release.yml) uses the official [Python Semantic Release action](https://python-semantic-release.readthedocs.io/en/latest/configuration/automatic-releases/github-actions.html) after pushes to `main`. The action calculates the version, updates the changelog, creates and pushes the release commit and annotated tag, and publishes the GitHub release. There is no build, package publication, or separate release PR.
 
-Before the first publication, enable Actions and [release immutability](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes) in repository settings. Immutability applies to future published releases. Confirm the license and source access for the intended audience. These settings and a license are not created by the workflow.
+Before the first release, enable Actions and allow the pinned checkout and Semantic Release actions. Enable [release immutability](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes). If `main` requires PRs or checks for direct writes, configure `RELEASE_AUTOMATION_TOKEN` for an actor allowed to bypass those rules for the generated release commit. A fine-grained token needs repository **Contents: read and write**; the actor must also be allowed to create release tags. Without that secret, the workflow uses `GITHUB_TOKEN`, subject to repository rules. Remove any required `tooling-tests` check from the previous distribution workflow; the simplified workflow has no PR check.
 
-For each release:
+For each change:
 
-1. Review documentation and source-relative references manually. Assess compatibility using `VERSIONING.md`; choose a stable version or an explicit prerelease such as `1.0.0-rc.1`. No first version is assigned by these files.
-2. Move the relevant `Unreleased` changes into `## [<version>] - <actual-date>` in `CHANGELOG.md`. Include substantive `### Compatibility` and `### Migration` sections, even when the conclusion is that no conversion is required. Keep `Unreleased` for future changes.
-3. Run `python -B -m unittest discover -s tests -v` when release tooling changes. These tests exercise packaging and release metadata; automated documentation checks remain opt-in.
-4. Commit the reviewed files and push the commit to the selected release branch. Create and push an annotated tag at that exact commit. Replace the example version below with the selected version; it is not an existing release.
+1. Add or update notes under `CHANGELOG.md` → `Unreleased`. Review `### Compatibility` and `### Migration` against the complete pending change set, including concrete conversions or an explicit statement that no conversion is required. This is a human PR review requirement; the workflow does not validate these assessments automatically.
+2. Use Conventional Commit messages. [releaserc.toml](releaserc.toml) maps `feat` to MINOR and the other supported Commitizen types (`fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`) to PATCH. Mark incompatible changes with `!` and explain them in a `BREAKING CHANGE:` paragraph. Breaking changes increment MINOR during `0.y.z` and MAJOR after `1.0.0`. A `docs` change can be incompatible. For squash merges, the final commit title and breaking-change paragraph determine the version; branch commits embedded in the squash body are not parsed individually.
+3. Review and merge the normal PR. Merge authorizes publication. Actions generates the version and UTC date, moves the reviewed pending notes into the release entry, adds a commit summary, clears `Unreleased`, and publishes. The prepared initial `0.1.0` entry is preserved when it matches the calculated version and `Unreleased` is empty. Subsequent releases use pending notes rather than manually dated entries.
+4. Check the workflow result and share the version-specific source URL or GitHub source archive. The release description links to its tagged changelog, including compatibility and migration. Consumer projects resolve and record the full commit SHA; publication does not upgrade them automatically.
 
-   ```text
-   git tag -a v1.0.0 -m "Product Foundation Kit v1.0.0"
-   git push origin v1.0.0
-   ```
+The small templates in [.github/release-templates](.github/release-templates) preserve the kit's changelog format and link release notes to the matching source revision. They are separate from canonical kit schemas under `templates/`. GitHub supplies ZIP and tar archives for release tags; this repository does not build additional archives or checksums. There is no package manifest or separate `VERSION` file, and nothing is published to PyPI.
 
-5. Open the workflow run and resulting draft. Verify the version, recorded full commit SHA, release notes, complete ZIP, and checksum. The ZIP contains the tracked kit tree at the commit, including source-only maintenance files, without Git history or uncommitted working files. Extract outside any generated project and review the method entry points. Treat a failed or partial upload as an incomplete draft.
-6. Publish the reviewed draft through GitHub Releases. Prerelease tags are marked as prereleases. With immutability enabled, attach and verify all assets before publication; the published assets and tag are locked. Share the version-specific tree URL or archive, and have consumers record its resolved commit.
+Selecting `1.0.0` remains deliberate: change `major_on_zero` to `true` with a breaking commit or use an explicitly authorized Semantic Release CLI override. The supplied configuration publishes stable versions from `main`; prereleases require an explicit configuration decision. The generated commit uses `docs(release): publish <version> [skip ci]` to avoid another workflow run with an additional token.
 
-The release tag and its matching changelog entry are the version authorities. There is no package manifest or separate `VERSION` file. The workflow checks tag syntax, matching dated notes, and the checked-out commit; it does not certify authoring readiness or project review outcomes.
+When changing this adapter, verify the configuration and template behavior in a temporary repository without remote writes, and review documentation manually. Generated projects require none of this maintainer tooling. If publication fails, inspect the action log and use the documented [Semantic Release troubleshooting](https://python-semantic-release.readthedocs.io/en/latest/misc/troubleshooting.html). **Actions → Release kit → Run workflow** on `main` reruns the standard action; it does not guarantee recovery of a partially completed release. Never move a published tag or overwrite its assets. Corrections to released source require a new version.
 
-For a local packaging preview in a Git checkout, after creating the tag:
-
-```text
-python scripts/prepare_release.py --tag v1.0.0 --output-dir dist
-```
-
-Python 3.10+ and Git are required only for maintainer tooling. This writes `product-foundation-kit-v1.0.0.zip`, its `.sha256` file, and `release-notes.md` under the ignored output directory. The checksum covers the attached ZIP bytes, rather than GitHub's separately generated source archives. The GitHub workflow uses the runner's Python and GitHub CLI; generated projects require neither.
-
-If a run fails before a draft exists, resolve the external failure and rerun the same job for the same unchanged tag. If a draft already exists, the workflow refuses to overwrite it; inspect it and complete missing assets manually or delete only the unpublished draft before rerunning. Never move or reuse the tag to fix source content. Corrections to the tagged source require a new version and changelog entry. Published releases are never replaced.
-
-The automation is an optional distribution adapter. Other hosts can use the same policy and packaging script, then publish the resulting assets through their own release mechanism.
+Other hosts can apply the same versioning policy through their own publication mechanism.
 
 ## Layout and state migration
 
