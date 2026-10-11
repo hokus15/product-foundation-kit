@@ -6,6 +6,18 @@ This file records kit changes for release consumers. Versions follow [the versio
 
 ## [Unreleased]
 
+### Added
+
+- Weekly Dependabot checks for GitHub Actions, including checkout and Python Semantic Release, with update PRs using `ci(deps)` commit messages.
+
+### Compatibility
+
+This change affects repository maintenance only. The kit's method, canonical schemas, artifact destinations, and public contract remain compatible with existing projects.
+
+### Migration
+
+Existing projects require no migration or conversion of generated artifacts.
+
 ## [0.1.0] - 2026-10-04
 
 ### Added
