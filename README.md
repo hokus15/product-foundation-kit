@@ -47,6 +47,7 @@ product-foundation-kit/
 ├── LICENSE
 ├── AGENTS.md
 ├── GETTING_STARTED.md
+├── CONTRIBUTING.md
 ├── MAINTAINING.md
 ├── VERSIONING.md
 ├── CHANGELOG.md
@@ -85,7 +86,11 @@ Use a version-specific source URL and record its resolved commit in project stat
 
 Kit documentation is in English. Each initiative chooses its conversation and documentation languages by area, AI assistant, repository host, downstream tools, architectures, and stacks.
 
-[Maintaining the kit](MAINTAINING.md) covers changes and distribution. An assistant executes this documented method within the project's requested scope.
+An assistant executes this documented method within the project's requested scope.
+
+## Contribute to the kit
+
+Follow [Working on the repository](CONTRIBUTING.md) when changing Product Foundation Kit itself. The procedure covers branches, changes, commits, PRs, changelog review, and release verification using your preferred tools. [Contributing with an AI assistant](CONTRIBUTING.md#contributing-with-an-ai-assistant) defines how an assistant handles contribution scope, existing work, validation evidence, and the requested completion point. [Maintaining the kit](MAINTAINING.md) owns maintenance and distribution procedures.
 
 ## License and attribution
 

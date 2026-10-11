@@ -6,6 +6,18 @@ This file records kit changes for release consumers. Versions follow [the versio
 
 ## [Unreleased]
 
+### Added
+
+- A repository contribution procedure for people and AI assistants, with actions and completion criteria for branches, changes, commits, changelog review, PR updates, release verification, and Dependabot updates, independent of the editor or Git client.
+
+### Compatibility
+
+This change adds repository maintenance guidance. The kit's method, canonical schemas, artifact destinations, and public contract remain compatible with existing projects.
+
+### Migration
+
+Existing projects require no migration or conversion of generated artifacts.
+
 ## [0.1.1] - 2026-10-11
 
 ### Added
