@@ -6,6 +6,8 @@ This file records kit changes for release consumers. Versions follow [the versio
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-11
+
 ### Added
 
 - Weekly Dependabot checks for GitHub Actions, including checkout and Python Semantic Release, with update PRs using `ci(deps)` commit messages.
@@ -17,6 +19,13 @@ This change affects repository maintenance only. The kit's method, canonical sch
 ### Migration
 
 Existing projects require no migration or conversion of generated artifacts.
+
+### Commit summary
+
+#### Continuous integration
+
+- ci(deps): configure Dependabot for GitHub Actions (#2) ([0508f4b](https://github.com/hokus15/product-foundation-kit/commit/0508f4b302994fce3cb8985ef1d062711bad15d1)).
+
 
 ## [0.1.0] - 2026-10-04
 
