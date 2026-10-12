@@ -6,6 +6,8 @@ This file records kit changes for release consumers. Versions follow [the versio
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-10-12
+
 ### Changed
 
 - PM now uses a progressive seven-file core: README, AGENTS, conventions, state, initiative, shared product foundation, and selected increment. Existing split definitions remain supported; separate language policies, opportunity maps, risk registers, priorities, roadmaps, transfer records, and indexes are conditional.
@@ -31,6 +33,13 @@ For authorized adoption from 0.1.0–0.1.2, follow VERSIONING.md and apply these
 5. Keep an existing PM review in pm/sdd-handoff.md or another authoritative source and reference it from the INC and state. New increment reviews use the INC's PM-to-SDD review section. If relocation is requested, preserve all baseline, date, owner, result, criterion evidence, and history, then replace the old review with a link. A transfer document owns mappings and consumption evidence, not a second review.
 6. Preserve state metadata and W/I history. Remove empty future rows or duplicate summaries only when appropriate; retain actual artifact, review, scope revision, and upgrade records. Point PM review entries and blockers to their authoritative sources; navigation indexes can remain.
 7. Review affected content and links manually. Reopen a PM or downstream review only when its sources, scope, or evidence changed; relocation alone does not invalidate supported criteria. Record actual migration and unresolved reviews, then adopt the target source and revision when conversion is complete. Never delete existing files merely to reach seven files.
+
+### Commit summary
+
+#### Documentation
+
+- docs(pm): simplify progressive PM authoring (#4) ([ed385c1](https://github.com/hokus15/product-foundation-kit/commit/ed385c1db24acb639a921895b883b6cb005bb524)).
+
 
 ## [0.1.2] - 2026-10-11
 
