@@ -25,6 +25,14 @@ A project can stop after PM, specifications, planning, or verified implementatio
 
 The assistant asks focused questions, explains human and AI working hats, saves answers in their responsible documents, and preserves progress across sessions. Discovery depth follows uncertainty and the cost of a wrong decision.
 
+## A progressive PM foundation
+
+A new PM-only initiative uses seven files by W05: README, AGENTS, project conventions, project state, an initiative, a shared product foundation, and the selected increment. Create them progressively. The [PM catalog](method/artifacts.md) defines the minimum content and conditional extensions.
+
+The initiative records the problem and its basis, objectives, and applicable constraints and uncertainty. The product foundation owns shared value, actors, scope, capabilities, quality conditions, and needed vocabulary. The increment owns selected scope, selection rationale, outcome evaluation, and its PM review. Use the project's authoritative consolidated or split definitions and review sources.
+
+During conversation, save each answer, check direct contradictions, and update changed sources and state fields. Review affected content at phase closure and apply the complete seven-criterion PM review at W05. Current practice is explored when it affects a decision; separate language policies, opportunity maps, risk registers, roadmaps, transfer records, and indexes are conditional. Research, validation, and technical discovery remain available when uncertainty requires them.
+
 ## Technical decisions can start during PM
 
 PM can investigate viability and decide an architecture, platform, or integration when the initiative needs that answer. [Technical discovery](method/technical-discovery.md) records constraints and evidence in PM and consequential architectural choices in the intended profile's ADRs.
@@ -72,7 +80,7 @@ The [PM catalog](method/artifacts.md) and [SDD catalog](method/sdd/artifacts.md)
 
 ## What appears in a generated project
 
-The initiative receives its own rules, language policy, saved progress, and applicable PM and product documents. Specifications, profiles, technical plans, code, and operating records are added as the selected route reaches them.
+The initiative receives its own rules, language choices, saved progress, and applicable PM and product documents. Conventions own language choices unless a separate authoritative policy is needed or already exists. Specifications, profiles, technical plans, code, and operating records are added as the selected route reaches them.
 
 The kit's `method/`, `templates/`, and `reference/` remain in the external source. Project destinations are independent of the source layout. Navigation points to existing project outputs, and `project-state.md` records the source URL, known revision, selected endpoint, workflow mode, increment, and intended profile.
 

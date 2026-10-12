@@ -8,7 +8,7 @@ Describe the situation and its consequence.
 
 ## Evidence and current alternatives
 
-Link available observations and distinguish hypotheses from facts.
+Link available observations and distinguish hypotheses from facts. Describe current alternatives only when current practice affects the problem, scope, or expected improvement.
 
 ## Desired outcome
 

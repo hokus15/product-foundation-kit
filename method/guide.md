@@ -1,72 +1,75 @@
 # AI project onboarding
 
-Read this conversation guide from the method source. Use the [generation protocol](generation.md) to keep source resources external, the [workflow](workflow.md) for execution order, [working roles](roles.md) for contributions, and the [artifact catalog](artifacts.md) for project destinations.
+Read this guide from the external adopted revision. The [workflow](workflow.md) owns phase minima and endpoints, [roles](roles.md) own contributions, [generation protocol](generation.md) owns source and destination handling, and [PM catalog](artifacts.md) owns schemas and project paths.
 
 ## Starting and resuming
 
-Start onboarding when the user asks to define an initiative from the supplied method URL. Requests to change Product Foundation Kit itself are method maintenance.
+A request to define an initiative starts onboarding. A request to change this kit is maintenance.
 
-Read the source README, source agent instructions, generation protocol, workflow, roles, and catalog. Then inspect the destination's existing project instructions, conventions, documentation policy, progress, and definitions. Source policies are blueprints; they do not establish choices for the initiative.
+At the start of a session, read the source README, AGENTS, workflow, roles, generation protocol, and catalog. Inspect the destination's existing instructions, policies, state, and relevant definitions. Source policies are blueprints; retain authoritative project instructions.
 
-At W00, identify the destination, resolve the selected source revision, and establish persistence capability. Generate project state at `<project-root>/project-state.md` from the [state template](../templates/project/state.md). Record the actual source and full commit SHA when available; keep unknown provenance explicit. Read further source blueprints and templates from that same revision as their steps need them. Follow the [versioning policy](../VERSIONING.md) for recovery and upgrades.
+At W00, resolve the destination and adopted source revision, establish persistence, and create project state. Record the actual location and full commit SHA when available, with specific recovery work for unknown provenance. Keep checkouts and method resources outside the project. All resources use that revision, including templates first needed later.
 
-At W01, establish missing conventions and generate the project's own README, rules, and agent instructions. Create later files when their content becomes applicable. Keep source guides, canonical templates, downloads, and caches outside the target.
+At W01, establish only the configuration needed for discovery. New projects use conventions for documentation languages; retain a separate policy when one already exists or needs independent maintenance. Create the remaining PM core progressively.
 
-If source access or writing is unavailable, state the missing capability and request an accessible external source or provide identified unsaved drafts. Report only files actually saved.
+On resumption, reconcile state with actual definitions and recorded delegation. Retrieve the adopted revision and reuse supported answers, reviews, IDs, and W/I history. Follow [versioning](../VERSIONING.md) for source recovery or authorized upgrades. Use the project's authoritative consolidated or split definitions.
 
-On resumption, read the target's `project-state.md` and retrieve the recorded method resources and revision. Reconcile current documents and instructions with saved progress. Map earlier phase names to W01–W05 when needed, preserving answers, IDs, and supported reviews. Preserve W06–W12 and I01–I04 history for kit mode; external workflows retain their actual phase records.
-
-Use the adopted revision for every method resource. A newer release does not change it. Resolve unknown or inaccessible revisions before dependent work; keep independent work grounded in available project sources. An upgrade follows explicit instructions or recorded upgrade delegation and records its impact in project state.
+Missing access or persistence blocks dependent work. Continue independent work supported by available sources and identify unsaved drafts explicitly.
 
 ## Conversation rules
 
-1. Use the user's language initially and record the conversation language at W01. Apply document language choices independently.
-2. Ask one to three related questions per turn. Use the workflow questions as topic prompts and reuse existing answers.
-3. Request concrete examples when an abstract explanation is insufficient.
-4. Offer concise alternatives, explain material trade-offs, and challenge contradictions.
-5. Accept provisional names and uncertainty. Record specific unknowns, impact, and next action.
-6. Distinguish intent, observations, hypotheses, proposals, and assistant inferences. User statements do not establish research findings or implementation evidence.
-7. Apply explicit instructions and delegated scope. Clarify consequential ambiguity; silence does not accept a proposal.
-8. Save routine authoring within the requested scope. Register output paths and follow the extension rule before adding a new type.
-9. Keep question depth proportional to uncertainty. A source blueprint does not make every section or output applicable.
-10. Preserve progress when the user pauses; changed definitions reopen affected reviews.
+1. Use the user's language initially; record conversation and documentation languages independently at W01.
+2. Ask one to three related questions per turn, for input that affects a current decision or phase minimum.
+3. Request a concrete example when needed to understand observable behavior.
+4. Explain concise alternatives and their consequences; challenge contradictions.
+5. Attribute user knowledge, observations, intent, hypotheses, proposals, and AI inferences to their actual sources.
+6. Respect explicit instructions and delegation. Clarify consequential ambiguity; silence does not accept a proposal.
+7. Keep actual unknowns with their impact and next action in the responsible source. Resolve them when they affect the current exit condition.
+8. Preserve decisions and progress when the user pauses or changes context; reopen only affected reviews.
+9. Keep discovery proportional to uncertainty and the cost of a wrong decision.
 
 ## Human and AI working hats
 
-Use the [role assignment](roles.md#wizard-step-roles) for the current step and subtask. At transitions, explain the person's perspective and needed contribution and name the AI's active role.
+Use the [role assignment](roles.md) for the current phase or subtask. At transitions, briefly explain the human's needed contribution and the AI's responsibility.
 
-One person may cover several responsibilities, request explanation, or delegate a bounded choice. Record actual participants and authority in the project's conventions. Keep missing domain input with its responsible source and next action in project state.
+Conventions own participants and delegation; product actors belong to the shared foundation. Identify missing expertise only when a specific decision requires it. The same AI can author and review, but an independent review requires an actual separate reviewer.
 
-For example, W02 invites concrete problem context from a Problem Owner while the AI acts as Product Manager. W05 reviews the selected increment with a Product Owner and Product Manager / Quality Analyst. Later SDD roles apply only within the selected downstream scope.
-
-For decision-relevant technical questions during PM, use the [technical discovery branch](technical-discovery.md) and its conditional hats, then return to the PM step.
-
-At W05, use the [handoff rules](handoff.md). For a broader kit endpoint, continue with [SDD roles](sdd/roles.md) and its execution guide; external mode uses the receiving workflow's roles.
+During decision-relevant technical work, use [technical discovery](technical-discovery.md), its conditional roles, and existing profile records; return to the interrupted PM phase. W05 can continue into [SDD](sdd/roles.md) or an external workflow within recorded scope.
 
 ## Initial questions
 
-After W00 identifies where answers can be persisted, a first batch can be:
+After W00 establishes persistence, ask only unresolved configuration: working name, conversation and documentation language, required working rules, and decision ownership. Reuse choices supplied in instructions. A single default documentation language is sufficient unless actual area exceptions are needed.
 
-> What name should we use for the project, even provisionally?
->
-> Which language should we use in our conversation?
->
-> Should documentation use one language or different languages by area?
-
-Ask only for unresolved configuration. Follow up on working rules and authority before product discovery. Record the endpoint and workflow mode. A foundation-only request covers PM; broader scope follows the kit route unless an external workflow is selected. Technology, hosting, and SDD tool selection remain pending until needed.
+Record endpoint and workflow mode. A foundation-only request covers PM; broader scope uses the kit unless an external workflow is selected. Leave future tooling and technology choices until they affect work.
 
 ## Each conversation turn
 
-Read the active step's inputs, hats, existing project artifacts, and recorded delegation. Select the smallest unresolved question that advances the step.
+For PM, use this bounded cycle:
 
-After an answer, read the canonical source structure and generate or update its responsible project document. Remove method instructions and source-only links; maintain navigation only to existing project outputs.
+1. Read the active phase's minimum, relevant project sources, and delegation. Reuse method resources and templates already read in this session from the adopted revision. Read new resources when needed; reread affected material if it changed or the context is uncertain.
+2. Identify the new information and the definition or decision it affects. Check direct contradictions with affected sources.
+3. Update the responsible document with the supported addition. Register a new output and read its canonical schema before authoring. Change another source only when a concrete dependency or contradiction requires it.
+4. Update changed state fields: actual artifact status, active phase or hats, blocker reference, or next action.
+5. Ask the next unresolved decision-relevant question or advance when the phase minimum is supported.
 
-Update project state with actual saved files, consequential sources, active hats, artifact statuses, reviews, open questions, and next action. Advance when the step's exit condition is supported.
+Save substantive answers during the conversation, including supported information relevant to later phases. Reuse that information when its phase is reached.
+
+## Review cadence
+
+| Moment | Review |
+| --- | --- |
+| After an answer | Supported addition, direct contradictions, and changed references. |
+| At W02–W04 closure | Phase minimum and consistency of affected sources; reconcile changed navigation and state. |
+| At W05 | Full PM-SDD-01–07 review of the selected increment and baseline. |
+
+Each PM review has one authoritative source, normally the INC. State and transfer documents link that source. Reopen reviews when changes to underlying definitions affect their validity.
+
+Broader kit endpoints retain the SDD module's W09, W12, and execution review requirements.
 
 ## Content boundaries
 
-Keep project rules in root policies, product definitions in project specifications, evidence and priorities in PM, and technical choices in profiles. Progress references those sources.
+Conventions own project rules and language choices. The initiative owns problem context, objectives, evidence, applicable risks and priority comparisons. The foundation owns shared product value, actors, scope, capabilities, quality, and necessary vocabulary. The INC owns selected scope, selection rationale, outcome evaluation, and W05 review. Profiles own technical choices and evidence.
 
-Replace prompts with facts or specific pending decisions. Do not invent thresholds, permissions, formulas, research, selected technologies, commands, or verification evidence to complete a structure.
+Extract a section only when it needs independent maintenance; replace its original definition with a reference. Keep one owner for each fact, question, and review. State records progress and blocker links.
 
-Clearly synthetic examples can introduce sample data; expected outcomes derive from established behavior. Authoring readiness, implementation, tests, release, and product outcomes require their own supporting evidence.
+Apply the [document description rules](generation.md#document-descriptions) when creating or updating project definitions. Remove producer comments and generic prompts from generated outputs. Keep unresolved decisions specific and include applicable conditional sections. Quantities, rules, procedures, and execution claims require supporting sources; record missing definitions as pending. Implementation, release, and observed outcomes need their own evidence.

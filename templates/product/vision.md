@@ -4,9 +4,14 @@ status: draft
 
 # Product vision
 
+<!-- Conditional independently maintained definition. Core: intended users,
+value proposition, and direction. Reference initiative problem/evidence and
+include actual open questions. Recalculate links to
+the foundation or retained sources that own related content. -->
+
 ## Problem
 
-Pending: the problem the product solves and the consequences of maintaining the current situation.
+Reference the initiative's problem and evidence, adding only product-direction context not already owned there.
 
 ## Intended users and context
 

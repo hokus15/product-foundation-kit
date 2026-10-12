@@ -13,12 +13,15 @@ When changing the kit:
 - Keep README, instructions, prompts, complete workflow, PM and SDD guides, roles, catalogs, and state consistent.
 - Preserve W00–W05, W06–W12, I01–I04, and established review IDs. Define endpoints and supporting evidence clearly.
 - Give each generated type a canonical schema, destination or pattern, trigger, owner, and completion rule.
-- Preserve metadata, main sections, identifiers, and statuses. Explain necessary migrations.
+- Preserve metadata, core section meanings, identifiers, and statuses. Mark conditional and later-phase sections explicitly; explain changed contracts and migrations.
 - Keep method resources separate from project destinations and update incoming links and heading fragments after moves.
 - Keep early technical discovery available during PM; retain shared product independence and per-profile technical evidence.
+- Apply the [document description rules](method/generation.md#document-descriptions) to kit guides and generated descriptive content; place rationale and change history in their responsible records.
 - Review prose, references, and ownership manually. Run automated documentation checks only when explicitly requested.
 
-A selected endpoint determines applicable outputs. Source schemas and future-phase resources create no mandatory project placeholders.
+A selected endpoint and each artifact's creation condition determine applicable outputs.
+
+For PM, maintain the progressive seven-file core, explicit phase minima, bounded per-answer work, and a single authoritative review per increment and baseline. Conditional records, sections, and navigation follow their creation conditions. Transfer documents reference authoritative reviews. SDD requirements belong to its catalog and workflow.
 
 ## Distribute and evolve
 
@@ -32,7 +35,7 @@ Release migration notes must identify applicable source versions, changed contra
 
 The GitHub distribution targets [hokus15/product-foundation-kit](https://github.com/hokus15/product-foundation-kit). [.github/workflows/release.yml](.github/workflows/release.yml) uses the official [Python Semantic Release action](https://python-semantic-release.readthedocs.io/en/latest/configuration/automatic-releases/github-actions.html) after pushes to `main`. The action calculates the version, updates the changelog, creates and pushes the release commit and annotated tag, and publishes the GitHub release. There is no build, package publication, or separate release PR.
 
-Before the first release, enable Actions and allow the pinned checkout and Semantic Release actions. Enable [release immutability](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes). If `main` requires PRs or checks for direct writes, configure `RELEASE_AUTOMATION_TOKEN` for an actor allowed to bypass those rules for the generated release commit. A fine-grained token needs repository **Contents: read and write**; the actor must also be allowed to create release tags. Without that secret, the workflow uses `GITHUB_TOKEN`, subject to repository rules. Remove any required `tooling-tests` check from the previous distribution workflow; the simplified workflow has no PR check.
+Before the first release, enable Actions and allow the pinned checkout and Semantic Release actions. Enable [release immutability](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/prevent-release-changes). If `main` requires PRs or checks for direct writes, configure `RELEASE_AUTOMATION_TOKEN` for an actor allowed to bypass those rules for the generated release commit. A fine-grained token needs repository **Contents: read and write**; the actor must also be allowed to create release tags. Without that secret, the workflow uses `GITHUB_TOKEN`, subject to repository rules. Align branch-protection requirements with the workflows available in this repository.
 
 For each change:
 

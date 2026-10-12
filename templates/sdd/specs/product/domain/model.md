@@ -9,7 +9,7 @@ status: draft
 | Concept | Meaning | Business identity | Relevant information |
 | --- | --- | --- | --- |
 
-Use [glossary](../../../../product/glossary.md) terms. Describe entities and values through their business meaning.
+Use vocabulary from the [foundation](../../../../product/foundation.md) or its existing extracted glossary. Describe entities and values through their business meaning and generate links to their actual owner.
 
 ## Relationships
 

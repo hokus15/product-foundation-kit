@@ -11,7 +11,7 @@ status: draft
 
 ## Journeys
 
-Pending: entry points, relationships between destinations, return paths, and task continuity. Reference [actors](../../../product/actors.md) and existing Features that define access.
+Pending: entry points, relationships between destinations, return paths, and task continuity. Reference actors in the [foundation](../../../product/foundation.md) or their existing extracted definition, and Features that define access.
 
 ## State and context
 

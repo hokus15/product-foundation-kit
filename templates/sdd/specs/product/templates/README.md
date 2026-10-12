@@ -9,6 +9,6 @@
 
 Copy the regulatory catalog to `domain/regulatory-decisions.yaml` when applicable to the product; its entries reference existing rules. Adapt its scope to relevant regulation and retain effective dates, sources, owners, and review evidence. Keep internal decisions without regulatory dependencies in their rules and decision records.
 
-Preserve template metadata and section meanings. Follow the [documentation policy](../../../../project/documentation-policy.md) for product content, assign stable IDs, and remove instructions from the resulting document.
+Preserve template metadata and section meanings. Follow language choices in [project conventions](../../../../project/conventions.md) or a separate authoritative documentation policy when present, assign stable IDs, and remove instructions from the resulting document.
 
 Use the [artifact catalog](../../../../../method/sdd/artifacts.md) for creation conditions and the [workflow](../../../../../method/sdd/workflow.md) for step ownership.

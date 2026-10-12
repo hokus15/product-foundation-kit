@@ -34,12 +34,7 @@ This matrix applies through the requested endpoint. Outputs are generated progre
 
 | Step | Required content | Conditional content |
 | --- | --- | --- |
-| W00 | `project-state.md`; method source, revision when known, and destination context. | An external source checkout when retrieval needs it. No checkout files are project outputs. |
-| W01 | `project-conventions.md`, including participants and decision authority; `documentation-policy.md`, `AGENTS.md`, `README.md`; requested endpoint and working context in state. | Additional project rules through the catalog extension procedure. |
-| W02 | `pm/initiative.md`, `specs/product/vision.md`, `specs/product/actors.md`, `specs/product/glossary.md`. | Research records for identifiable sources or activities. |
-| W03 | `specs/product/scope.md`, `capabilities.md`, `quality-requirements.md`, and `pm/opportunities.md`; objective updates in the initiative. | Additional research. |
-| W04 | `pm/risks.md`, `priorities.md`, `roadmap.md`, and a selected `INC-NNN` record. | Research, validation, and decision records under their conditions. |
-| W05 | `pm/sdd-handoff.md`, including source baseline, readiness and downstream next action; the increment's retained review; state. | Discovery records needed to resolve a failed handoff; downstream mappings when requested. |
+| W00–W05 | The seven-file PM core or supported existing sources, and the authoritative increment review defined by the [PM catalog](../artifacts.md). | PM extraction, evidence, navigation, and transfer records under that catalog's triggers. |
 | W06 | Relevant business vocabulary and domain applicability in project state. | A domain model, processes, shared rules, and regulatory catalog entries needed to define the increment. |
 | W07 | At least one Feature and its index; capability navigation to existing Features. | Further Features as the bounded increment requires. |
 | W08 | Interaction applicability and conditional-output decisions in project state. | Applicable shared UI specifications, pages, flows, operation contracts, and indexes. |
@@ -59,7 +54,7 @@ Unqualified filenames in a row share the directory of the preceding qualified fi
 | `GETTING_STARTED.md` | — | Source only: Human usage guide. |
 | `MAINTAINING.md` | — | Source only: Template maintenance guide. |
 | `templates/project/conventions.md` | `project-conventions.md` | W01. |
-| `templates/project/documentation-policy.md` | `documentation-policy.md` | W01. |
+| `templates/project/documentation-policy.md` | `documentation-policy.md` | Existing policy retained, or language choices need independent maintenance; otherwise conventions own them. |
 | `method/guide.md` | — | Source only: Conversation rules. |
 | `method/workflow.md` | — | Source only: Step order and gates. |
 | `method/roles.md` | — | Source only: Human and AI working hats, contributions, and authority boundaries. |
@@ -75,16 +70,16 @@ Unqualified filenames in a row share the directory of the preceding qualified fi
 
 | Source path | Project destination | Generation condition or source role |
 | --- | --- | --- |
-| `templates/pm/indexes/pm.md` | `pm/README.md` | Generate navigation when the corresponding project documents exist. PM navigation and source ownership. |
+| `templates/pm/indexes/pm.md` | `pm/README.md` | Conditional separate navigation when useful; the root README serves the PM core. |
 | `templates/pm/initiative.md` | `pm/initiative.md` | Generate the initiative brief; W02–W04. Reference recorded method provenance when relevant. |
-| `templates/pm/opportunities.md` | `pm/opportunities.md` | W03–W04. |
-| `templates/pm/priorities.md` | `pm/priorities.md` | W04. |
-| `templates/pm/roadmap.md` | `pm/roadmap.md` | W04; revise as outcomes change. |
-| `templates/pm/risks.md` | `pm/risks.md` | W03–W05; revise when evidence changes. |
-| `templates/pm/decisions.md` | `pm/decisions.md` | Update when a decision record exists. |
-| `templates/pm/sdd-handoff.md` | `pm/sdd-handoff.md` | W05. |
-| `templates/pm/indexes/research.md` | `pm/research/README.md` | Generate navigation when the corresponding project documents exist. Research index. |
-| `templates/pm/indexes/validation.md` | `pm/validation/README.md` | Generate navigation when the corresponding project documents exist. Validation index. |
+| `templates/pm/opportunities.md` | `pm/opportunities.md` | Conditional independently maintained opportunity map; otherwise inline in initiative. |
+| `templates/pm/priorities.md` | `pm/priorities.md` | Conditional independently maintained ordering; otherwise initiative comparisons and INC selection rationale. |
+| `templates/pm/roadmap.md` | `pm/roadmap.md` | Conditional maintained sequence of multiple increments. |
+| `templates/pm/risks.md` | `pm/risks.md` | Conditional independently maintained risk register; otherwise inline in initiative. |
+| `templates/pm/decisions.md` | `pm/decisions.md` | Conditional useful navigation to existing DEC records. |
+| `templates/pm/sdd-handoff.md` | `pm/sdd-handoff.md` | Conditional separate transfer/mapping record; references the authoritative PM review. |
+| `templates/pm/indexes/research.md` | `pm/research/README.md` | Conditional useful research navigation. |
+| `templates/pm/indexes/validation.md` | `pm/validation/README.md` | Conditional useful validation navigation. |
 | `templates/pm/README.md` | — | Source only: PM template navigation. |
 | `templates/pm/research.md` | — | Source only: Research template. |
 | `templates/pm/validation.md` | — | Source only: Validation template. |
@@ -95,15 +90,16 @@ Unqualified filenames in a row share the directory of the preceding qualified fi
 
 | Source path | Project destination | Generation condition or source role |
 | --- | --- | --- |
-| `templates/product/specifications-index.md` | `specs/README.md` | Generate navigation when the corresponding project documents exist. Specification map. |
+| `templates/product/specifications-index.md` | `specs/README.md` | Conditional separate specification navigation when useful. |
 | `method/sdd/authoring-guide.md` | — | Source only: SDD content rules and readiness criteria. |
-| `templates/product/index.md` | `specs/product/README.md` | Generate navigation when the corresponding project documents exist. Product navigation. |
-| `templates/product/vision.md` | `specs/product/vision.md` | W02–W03. |
-| `templates/product/actors.md` | `specs/product/actors.md` | W02; refine access when behavior is defined. |
-| `templates/product/scope.md` | `specs/product/scope.md` | W03. |
-| `templates/product/capabilities.md` | `specs/product/capabilities.md` | W03; add navigation at W07. |
-| `templates/product/quality-requirements.md` | `specs/product/quality-requirements.md` | W03; refine for the increment. |
-| `templates/product/glossary.md` | `specs/product/glossary.md` | W02 onward. |
+| `templates/product/index.md` | `specs/product/README.md` | Conditional separate product navigation when useful. |
+| `templates/product/foundation.md` | `specs/product/foundation.md` | Default shared foundation, started at W02 and bounded at W03. |
+| `templates/product/vision.md` | `specs/product/vision.md` | Retained or independently maintained direction under PM catalog triggers. |
+| `templates/product/actors.md` | `specs/product/actors.md` | Retained or independently maintained actors under PM catalog triggers. |
+| `templates/product/scope.md` | `specs/product/scope.md` | Retained or independently maintained boundaries under PM catalog triggers. |
+| `templates/product/capabilities.md` | `specs/product/capabilities.md` | Retained or independently maintained map; otherwise Feature navigation stays in the foundation. |
+| `templates/product/quality-requirements.md` | `specs/product/quality-requirements.md` | Retained or independently maintained quality under PM catalog triggers. |
+| `templates/product/glossary.md` | `specs/product/glossary.md` | Retained or independently maintained vocabulary; otherwise use the foundation's terms. |
 | `templates/sdd/specs/product/domain/model.md` | `specs/product/domain/model.md` | W06 when shared concepts, relationships, or states need a model. |
 | `templates/sdd/specs/product/domain/rules/README.md` | `specs/product/domain/rules/README.md` | Generate navigation when the corresponding project documents exist. Shared rule index. |
 | `templates/sdd/specs/product/processes/README.md` | `specs/product/processes/README.md` | Generate navigation when the corresponding project documents exist. Process index. |
@@ -165,7 +161,7 @@ For a nonvisual increment, record UI non-applicability in project state and omit
 | `pm/research/RES-NNN-short-description.md` | [Research](../../templates/pm/research.md) | Identifiable research source or activity informs a decision; W02 or W04. No findings are invented for planned work. |
 | `pm/validation/VAL-NNN-short-description.md` | [Validation](../../templates/pm/validation.md) | A defined hypothesis and a proportionate agreed or delegated check can affect a decision; W04. Execution remains planned until performed. |
 | `pm/DEC-NNN-short-description.md` | [Decision](../../templates/pm/decision.md) | A consequential product/planning choice needs rationale or supersession; any applicable step. Proposals remain proposed. |
-| `pm/INC-NNN-short-description.md` | [Increment](../../templates/pm/increment.md) | A candidate outcome is bounded; W04. Selection requires a recorded choice. |
+| `pm/INC-NNN-short-description.md` | [Increment](../../templates/pm/increment.md) | A candidate outcome is bounded; W04. Selection requires a recorded choice. Owns the W05 review by default. |
 
 ## Repeatable product and interaction outputs
 
@@ -220,7 +216,7 @@ Assign the next unused identifier in each established series and preserve existi
 
 Scope criterion references by their document, such as `FEAT-NNN / AC-01`. Keep the Feature template's RF and CU IDs stable, UI page criteria as `UI-AC-NN`, and quality criteria as `QR-NN-AC-NN`.
 
-Translate headings and descriptive content through the documentation policy. Preserve metadata keys and defined status tokens. Create conditional directories when their first applicable file is registered.
+Translate headings and descriptive content using conventions or the separate authoritative documentation policy when present. Preserve metadata keys and defined status tokens. Create conditional directories when their first applicable file is registered.
 
 ## Extending the catalog
 

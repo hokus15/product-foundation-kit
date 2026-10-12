@@ -10,7 +10,7 @@ opportunity_refs: []
 # Validation: <title>
 
 <!-- Statuses: planned, running, completed, cancelled. Use the PM language
-selected in the project's documentation policy.
+selected in conventions or a separate authoritative documentation policy.
 A completed validation records an executed check; its outcome may support,
 contradict, or leave the hypothesis unresolved. -->
 

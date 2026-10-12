@@ -4,7 +4,9 @@ This guide supports W06–W12 in the kit's SDD module. Read it from the external
 
 Define product behavior once, independently of implementation architecture and programming stack. Multiple architecture profiles reuse the same product, UI, contracts, and acceptance criteria, with their own technical plans and evidence.
 
-Read the project's documentation policy, vision, scope, actors, capabilities, quality requirements, and existing vocabulary. Resolve contradictions in the source that defines the behavior. Reference PM evidence that constrains a decision.
+Read project conventions and any separate authoritative documentation policy, then the actual product foundation or retained/extracted vision, scope, actors, capabilities, quality, and vocabulary sources. Resolve contradictions in the source owning the behavior. Reference PM evidence and the selected increment's authoritative W05 review. Use each definition's authoritative consolidated or split source.
+
+Apply the [document description rules](../generation.md#document-descriptions) to shared specifications and profile guides. Update them to describe current behavior, decisions, and procedures; keep rationale and history in their responsible records.
 
 ## Domain, processes, and rules — W06
 
