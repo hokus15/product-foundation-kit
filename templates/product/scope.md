@@ -4,6 +4,10 @@ status: draft
 
 # Product scope
 
+<!-- Conditional independently maintained scope. Core: included scope and
+exclusions. Context links actual owners; future evolution, usage conditions,
+and pending decisions apply when relevant. -->
+
 ## Context
 
 Define the boundaries of the [vision](vision.md) for known users and uses.

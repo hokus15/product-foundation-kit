@@ -1,6 +1,7 @@
 # Optional template. Copy to specs/product/domain/regulatory-decisions.yaml
 # when product rules depend on changing external criteria.
-# Use the product language selected in the documentation policy for descriptions.
+# Use the product language selected in conventions or a separate authoritative
+# documentation policy for descriptions.
 # Add existing rule links relative to the destination file.
 # Use null for unknown dates; never invent evidence.
 schema_version: 1

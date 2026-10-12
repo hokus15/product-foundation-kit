@@ -1,55 +1,68 @@
 # Project agent instructions
 
-<!-- Canonical template for <project-root>/AGENTS.md.
-Write in the project's selected agent-instruction language.
-Preserve existing authoritative instructions. Replace prompts with agreed rules,
-remove this comment and source-only links, and include only applicable areas.
-Use project-state.md for the actual method source and revision.
-Do not copy the method repository's AGENTS.md. -->
+<!-- Generate operational rules in the selected language; preserve existing
+authoritative destination instructions. Reference conventions and authoritative
+definitions. Omit unused conditional sections and producer comments. -->
 
 ## Project conventions
 
-<Reference the existing project-conventions.md and documentation-policy.md.
-State agreed communication, delegated decisions, authoring, and validation rules.
-Describe the specific project's purpose and boundaries where useful.>
+<Read project-conventions.md for communication, language choices, participants,
+authority, and delegation. Read a separate documentation-policy.md when one
+exists and owns language choices. Apply existing instructions and preserve IDs,
+metadata keys, filenames, and defined status meanings.>
 
 ## Project definitions and source ownership
 
-<Identify existing product, UI, contract, and PM sources and their responsibilities.
-Keep product behavior independent of architectural patterns and programming stacks.
-Reference only existing project files.>
+<Identify existing initiative, foundation or split product sources, and INC
+records. PM owns evidence and investment choices; product sources own shared
+behavior; profiles own technical decisions and execution evidence.
+Definitions and full questions have one responsible source.>
 
 ## PM-to-SDD handoff
 
-<Read the selected endpoint and workflow mode from project-state.md. Run applicable
-W00-W05 work and reference pm/sdd-handoff.md once authored. With kit mode and
-broader scope, continue through its W06-W12 and applicable I01-I04 guides and
-canonical schemas. External mode uses the receiving workflow's sequence and templates. Preserve
-source ownership, stable IDs, the reviewed baseline, and actual downstream paths.
-Keep technical choices associated with their intended architecture profile.>
+<Read endpoint and mode from project-state.md. Follow the adopted kit's W00-W05
+phase minima. Record the W05 criterion evidence once, normally in the INC;
+reference the authoritative review source from state. A separate transfer
+document is conditional on receiving needs.
+With a ready review and broader kit scope, continue through applicable W06-W12
+and I01-I04 work. External mode uses native phases and schemas.>
 
 ## Technical profiles
 
-<Use an explicitly requested profile or the active selection in
-specs/architecture/current.md when that file exists.
-Keep profile decisions, plans, implementation, and conformance evidence separate.
-Preserve shared specifications when adding or changing a technical profile.>
+<!-- Conditional: profiles are relevant to requested work. -->
+
+<Use an explicitly requested profile or supported current.md selection.
+Keep technical decisions, plans, and evidence in that profile; reuse shared
+definitions and retain accepted decisions. Activate a profile when a supported
+decision selects it.>
 
 ## Authoring and project continuation
 
-<Read project-state.md when resuming. Retrieve required workflow, role, catalog,
-and canonical template resources from its recorded method source and revision;
-use that same revision for all resources and keep any checkout outside the project.
-Do not silently switch to a newer release. Resolve unknown or inaccessible source
-revisions before dependent work. Kit upgrades require explicit instructions or
-recorded upgrade delegation; preserve project content and record the migration
-and affected reviews in project-state.md. Use the applicable human and AI hats.
-Save project definitions in their responsible sources, preserve existing IDs,
-and keep specific unknowns and the next action current.>
+<On resumption read state and affected definitions; retrieve the recorded kit
+revision externally and use it for every resource. Reuse already read resources
+within a session unless changed or uncertain. Unknown or inaccessible revisions
+need resolution before dependent work. Upgrades require explicit instructions
+or recorded delegation and preserve evidence and affected review history.
+During PM, persist the new answer, check direct contradictions, and update only
+changed sources and state fields. Reconcile affected navigation at phase closure
+and perform the full PM review at W05. Ask decision-relevant questions, explain
+working hats at transitions, and omit unused conditional sections.>
+
+## Documentation style
+
+<Require descriptive project documents to specify current behavior,
+responsibilities, scope, constraints, and procedures directly. When updating,
+integrate supported changes and remove obsolete explanations, defensive
+narration, and comparisons with superseded versions. Keep rationale, alternatives,
+and change history in decision, increment, changelog, migration, or review records.
+Express actual exclusions, failures, and limitations as concrete scoped rules.
+Preserve evidence and review history in their responsible sources.>
 
 ## Implementation and validation
 
-<Implement only the requested scope using its shared specifications and intended
-profile plans. Identify source and generated paths, known commands, and required
-checks when defined. Keep unexecuted criteria unchecked and record actual evidence.
-State the project's agreed automated documentation-check policy.>
+<!-- Conditional: implementation is within the selected scope. -->
+
+<Implement requested behavior using shared specifications and intended profile
+plans. Preserve concrete source/generated boundaries and record actual checks
+and evidence; leave unexecuted acceptance items unchecked. Manual documentation
+review applies; automated documentation checks run only when explicitly requested.>

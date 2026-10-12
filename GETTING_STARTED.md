@@ -8,7 +8,7 @@ Replace the placeholders:
 
 For the GitHub distribution, use `https://github.com/hokus15/product-foundation-kit/tree/<release-tag>` as `<method-url>`, replacing `<release-tag>` with a published tag selected from [Releases](https://github.com/hokus15/product-foundation-kit/releases). Keep the project destination and desired endpoint specific to your initiative.
 
-> Let's build the project foundation using Product Foundation Kit from `<method-url>` in `<project-location>`. Guide me through `<desired-endpoint>` using the kit's workflow. Resolve the selected source to an identifiable revision and use that same revision for every method resource. Read README.md and AGENTS.md, then method/guide.md, method/workflow.md, method/roles.md, method/generation.md, and method/artifacts.md. Start with configuration, languages, and working rules. Keep the kit and any downloaded checkout outside the project. Explain my working hat and yours at transitions. Read canonical templates as their outputs become applicable. If the scope includes SDD or implementation, continue with method/sdd/ after the required reviews. Record the actual method source, full commit SHA when available, endpoint, workflow mode, increment, intended profile, answers, and progress in project-state.md.
+> Let's build the project foundation using Product Foundation Kit from `<method-url>` in `<project-location>`. Guide me through `<desired-endpoint>`. Resolve and record one adopted source revision; use it for every resource and keep the kit outside the project. Read README.md, AGENTS.md, method/guide.md, method/workflow.md, method/roles.md, method/generation.md, and method/artifacts.md. Use the progressive PM core and each phase's minimum; reuse resources already read within the session. Persist substantive answers in their responsible sources, check direct contradictions per answer, and update only changed state fields. Ask decision-relevant questions and explain working hats at transitions. Review affected sources at phase closure and the selected increment fully at W05. Read canonical schemas as outputs become applicable; add conditional records only when needed. Continue into method/sdd/ within my selected endpoint after supported reviews. Preserve actual provenance, scope, progress, review references, and next action in project-state.md.
 
 Use one of these endpoints:
 
@@ -25,6 +25,8 @@ If the endpoint is unclear, the assistant helps establish it. A request to defin
 
 The [workflow](method/workflow.md) defines the complete route and reviews. The [PM catalog](method/artifacts.md) and [SDD catalog](method/sdd/artifacts.md) define project paths and canonical schemas. The [generation protocol](method/generation.md) keeps the kit external.
 
+For PM, the default result is four root files plus the initiative, product foundation, and selected increment. Use the project's authoritative product definitions. Current practice, separate policies, PM registers, transfer records, and indexes follow the catalog's creation conditions.
+
 ## Generated project and source access
 
 The assistant needs access to the source and a writable destination. It can read remotely or retrieve an external checkout.
@@ -35,7 +37,7 @@ Only project-specific documents and authorized implementation appear in the dest
 
 ## Resume prompt
 
-> Continue the project in `<project-location>`. Read its AGENTS.md, project-conventions.md, documentation-policy.md, project-state.md, and relevant definitions and profile records. Retrieve the recorded kit source and revision externally, and use that revision for all guides, catalogs, templates, and references. Do not switch to a newer release. If the revision is unknown or inaccessible, resolve the specific source issue before dependent work; do not silently substitute another version. Restore the endpoint, workflow mode, selected increment, intended profile, active hats, and earliest unresolved prerequisite. Continue within recorded scope without repeating answered topics.
+> Continue the project in `<project-location>`. Read its AGENTS.md, project-conventions.md, project-state.md, any existing authoritative documentation policy, and relevant definitions and profiles. Retrieve the recorded kit revision externally and use it for every resource. Resolve unknown or inaccessible provenance before dependent work. Restore endpoint, mode, increment, profile, active hats, and the earliest unresolved prerequisite. Reuse supported answers and reviews, whether the product definitions are consolidated or split. In PM, persist each new contribution, check direct contradictions, and update changed state fields. Continue within recorded scope and perform phase and checkpoint reviews when due.
 
 Preserve existing definitions, IDs, decisions, and supported reviews. An update to the adopted kit revision is a maintenance decision recorded with the reconciled context.
 

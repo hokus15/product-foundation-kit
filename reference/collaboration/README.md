@@ -14,7 +14,7 @@ For local records, use these destinations only when coordination work is needed:
 
 Register each concrete local path through the [artifact catalog](../../method/sdd/artifacts.md). Create the directory when the first record is needed. External tracker entries follow the selected tool's conventions.
 
-Adapt collaboration templates to the languages selected in the [documentation policy](../../templates/project/documentation-policy.md).
+Adapt collaboration templates to language choices in [project conventions](../../templates/project/conventions.md) or a separate authoritative documentation policy when present.
 
 ## Optional platform integration
 

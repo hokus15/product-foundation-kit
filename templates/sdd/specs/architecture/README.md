@@ -17,4 +17,4 @@ Adding or changing a profile preserves the product definition. Product requireme
 
 Technology-specific decisions belong to the relevant profile. An ADR records one significant decision; an enabler defines a bounded technical capability and its verification. Feature-specific integration belongs to the profile's implementation plans.
 
-Keep setup, development, validation and deployment instructions in the relevant profile, using the architecture language selected in the [documentation policy](../../../project/documentation-policy.md). Maintain coverage and evidence separately for each implementation.
+Keep setup, development, validation and deployment instructions in the relevant profile, using language choices in [project conventions](../../../project/conventions.md) or a separate authoritative documentation policy when present. Maintain coverage and evidence separately for each implementation.

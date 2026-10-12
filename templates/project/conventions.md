@@ -8,47 +8,49 @@ decision_owner: null
 
 # Project conventions
 
-<!-- Source blueprint for the initiative's project-conventions.md.
-Generate selected project rules and actual participants. Remove this comment,
-generic directions, and relative links to external method resources. -->
+<!-- Core at W01: working identity, conversation and documentation languages,
+rules needed for the next work, and decision ownership/delegation. A few concrete
+sentences can satisfy these sections. Include conventions needed for current work.
+Existing authoritative destination policies remain in force. -->
 
 ## Identity and working location
 
-Pending: project name, optional working name, target location, and whether this is a new initiative or an existing product. A provisional name is sufficient to start discovery.
+<Working name, destination, and new or existing initiative. A provisional name
+is sufficient; reference state for method source and revision.>
 
 ## Conversation and documentation
 
-Select the conversation language independently of document languages. Record documentation languages, readers, and filename conventions in the [documentation policy](documentation-policy.md).
+<Conversation language and one default documentation language. Record filename
+language and any actual area exceptions. Ask for readers or rationale only when
+they affect a language choice. Conventions own these choices unless an existing
+or independently maintained documentation-policy.md owns them; reference its choices here. Preserve metadata keys, IDs, and status tokens
+across translations.>
 
 ## General working rules
 
-| Concern | Selected rule | Basis or instruction |
-| --- | --- | --- |
-| Communication style and level of detail | Pending | Pending |
-| Routine drafting and file updates | Pending | Pending |
-| Decisions the assistant may make when delegated | Pending | Pending |
-| Changes that require a user decision | Pending | Pending |
-| Manual review and automated documentation checks | Pending | Pending |
-| Source control, collaboration, and publishing tools, if used | Pending | Pending |
-
-Capture the user's preferences as actionable instructions. Keep product behavior in product specifications and technical decisions in architecture profiles. Update agent instructions when an agreed rule changes how the assistant works; retain this document as the reference for the convention.
+<Communication preferences, routine authoring scope, and any rules that affect
+the next activity. Manual documentation review is standard; automated
+documentation checks require an explicit request. Record tooling preferences
+when relevant. AGENTS references these conventions and contains operational
+instructions.>
 
 ## Participants, working hats, and decision authority
 
-Use [working roles](../../method/roles.md) to identify the perspective needed at each step. Record who can contribute domain knowledge, decide product or technical questions, and assess acceptance or operating needs. One person can cover several responsibilities.
-
-| Responsibility or working hat | Person or available source | Decision authority and delegated AI choices | When input is needed |
-| --- | --- | --- | --- |
-
-Use the recorded decision owner where appropriate. Identify absent expertise or authority only when it affects a specific question; keep the missing contribution and next action in onboarding state. Assuming a hat does not establish professional expertise or accept a proposal.
+<Who can supply domain knowledge and decide scope, priorities, and consequential
+technical questions; what the AI may decide under delegation. One person can
+cover several responsibilities. Record absent input only when a current decision
+needs it. Decision authority follows the recorded assignment and delegation.>
 
 ## Known constraints and preferences
 
-Pending: record mandatory working constraints and optional preferences. The product's budget, operating conditions, and business constraints belong in the initiative brief. Record technical preferences here until their suitability can be assessed during architecture selection; a preference does not activate a profile.
+<!-- Conditional: actual working constraints or preferences not already above.
+Business constraints belong to the initiative; technical decisions to profiles. -->
+
+<Relevant instruction and whether it is mandatory or preferred.>
 
 ## Unresolved configuration
 
-| Question | Impact | When it needs resolution | Next action |
-| --- | --- | --- | --- |
+<!-- Conditional: actual unresolved choice that affects current work,
+with impact and next action. -->
 
-Resolve configuration when it affects the next action. Tool selection, licensing, and detailed technical conventions can remain pending until needed.
+<Specific unresolved choice and when it needs resolution.>

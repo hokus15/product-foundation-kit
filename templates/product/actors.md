@@ -4,6 +4,10 @@ status: draft
 
 # Actors
 
+<!-- Conditional independently maintained actor definition. Core: users and
+responsibilities. Add non-user participants and pending decisions only when
+applicable. Link the authoritative foundation or extracted sources. -->
+
 ## Users and responsibilities
 
 | Actor | Objective | Responsibility | Defined access or permission |

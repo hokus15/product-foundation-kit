@@ -18,5 +18,7 @@ Pending: define adaptation to available space and pattern reuse criteria.
 
 ## Sources
 
-- [Actors](../../../product/actors.md).
-- [Quality requirements](../../../product/quality-requirements.md).
+- [Product foundation](../../../product/foundation.md): applicable actors and quality conditions.
+
+<!-- Generate links to the authoritative foundation or extracted actor and
+quality sources. -->

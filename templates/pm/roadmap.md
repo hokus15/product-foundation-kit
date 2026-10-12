@@ -8,12 +8,12 @@ updated_on: null
 
 ## Increments
 
-Each increment pursues a bounded outcome and uses the [increment template](increment.md). The sequence follows [priorities](priorities.md); record a date as a commitment only when a decision supports it.
+Each increment pursues a bounded outcome and uses the [increment template](increment.md). Reference priority rationale in the initiative or an existing independently maintained priority record. Record a date as a commitment only when a decision supports it. This roadmap is conditional on a maintained sequence of multiple increments.
 
 | Increment | Outcome and objective | Capability | Horizon or decided date | Dependencies | Status | Outcome review |
 | --- | --- | --- | --- | --- | --- | --- |
 
-Increment statuses: `candidate`, `selected`, `specifying`, `implementing`, `evaluating`, `closed`, and `cancelled`. The `closed` status records that the outcome has been evaluated and a decision taken; describe separately whether the target was achieved.
+Use increment status meanings from the canonical increment schema; each INC owns its evaluation and subsequent decision.
 
 ## Next increment
 

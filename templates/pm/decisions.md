@@ -8,6 +8,9 @@ updated_on: null
 
 Use the [decision template](decision.md). Store records as `DEC-NNN-short-description.md` in this folder and add them to the index. Record technical decisions in ADRs.
 
+<!-- Create this index when decisions need separate navigation. The initiative
+or root README can link individual DEC records. -->
+
 ## Index
 
 | ID | Decision | Status | Record date | Owner | Document |
@@ -15,4 +18,4 @@ Use the [decision template](decision.md). Store records as `DEC-NNN-short-descri
 
 ## Applying decisions
 
-When a decision confirms or changes a product definition, update its source in `specs/product/` and link it from the record. Decisions about work sequence update priorities or the roadmap. Keep evidence and comparisons of alternatives in the decision record.
+When a decision confirms or changes a product definition, update its source in `specs/product/` and link it from the record. Decisions about sequence update the initiative's priority content or existing extracted priorities/roadmap. Keep its rationale and alternative comparisons in the DEC; other records reference them.

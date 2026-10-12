@@ -1,37 +1,32 @@
 # <Project name>
 
-<!-- Canonical template for <project-root>/README.md.
-Write in the project's selected root documentation language.
-Describe the actual initiative from recorded answers. Remove this comment and
-resolved prompts. Omit optional sections without applicable project content.
-Every local navigation link must resolve to an existing project file. -->
+<!-- Generate at README.md with a brief purpose and navigation to actual project
+sources. Link the owners of product scope, working rules, reviews, and state. Update affected navigation at phase closure; this README is sufficient
+for the default PM core. Add independent indexes when navigation needs them. -->
 
-<Explain the problem, intended users, useful outcome, and known boundaries.
-Identify unresolved purpose or scope as a specific pending definition.>
+<Brief purpose, referencing the initiative and shared product definition.>
 
 ## Current scope and progress
 
-<Selected increment or present definition stage, supported status, material
-pending decision, and next action. Reference the actual project-state.md and
-existing scope or increment record. Once authored, link pm/sdd-handoff.md and
-identify its receiving workflow or pending next action.>
+<Link project-state.md and the selected INC when it exists. The INC owns its
+PM review by default; link an existing authoritative review if retained elsewhere.
+State owns current progress and next action.>
 
 ## Project documentation
 
 | Area | Existing project sources |
 | --- | --- |
 
-<Navigate to authored PM, product, applicable UI and contracts, and profiles.
-Add areas when their documents exist. Keep shared behavior independent of stack.
-Do not include source wizard guides or canonical template navigation.>
+<Link the initiative, foundation or retained split sources, and selected
+increment as authored. Add SDD and technical areas as their outputs exist.>
 
 ## Working conventions
 
-<Link existing project-conventions.md, documentation-policy.md, and AGENTS.md.
-Describe consequential project working rules when useful to readers.>
+<Link project-conventions.md and AGENTS.md. Include documentation-policy.md
+only when it exists and owns language choices.>
 
 ## Development and operations
 
-<Include when a technical profile has actual development, validation, CI, or
-release guides. Link those guides and identify the intended/default profile
-without duplicating commands or inferring architecture from folder names.>
+<!-- Conditional: actual profile operating guides exist. -->
+
+<Link applicable operating guides and the supported profile selection.>

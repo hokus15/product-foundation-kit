@@ -4,6 +4,11 @@ status: draft
 
 # Quality requirements
 
+<!-- Conditional independently maintained quality definition. Core: observable
+requirements and planned checks. Pending decisions apply only when present.
+Link context in its authoritative foundation or extracted owner. Preserve QR
+IDs when extracting requirements. -->
+
 Define shared conditions required by the [vision](vision.md), [scope](scope.md), and [actors](actors.md): accessibility, privacy, security, retention, recovery, performance, or other applicable concerns.
 
 ## Requirements

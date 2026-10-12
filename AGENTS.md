@@ -4,7 +4,7 @@
 
 - These instructions govern Product Foundation Kit and its use as an external source. Preserve existing authoritative instructions in a generated destination.
 - Keep all kit documentation and templates in English. Each project chooses conversation and documentation languages at W01.
-- Write directly about behavior, decisions, and work. Preserve identifiers and actual evidence; keep specific uncertainty in its responsible source.
+- Describe current behavior, decisions, responsibilities, constraints, and procedures directly. When updating descriptive documents, integrate the supported change and remove obsolete explanations, defensive narration, and comparisons with superseded versions. Keep rationale and history in decision, increment, changelog, migration, or review records. Preserve identifiers and actual evidence; keep specific uncertainty in its responsible source.
 - Keep the kit independent of hosts, AI providers, SDD tools, architectures, and programming stacks.
 
 ## Repository responsibilities
@@ -17,7 +17,7 @@
 - Root documents describe use and maintenance of the kit.
 - `VERSIONING.md` owns release compatibility, adopted source revisions, and project upgrades; `CHANGELOG.md` records changes for release consumers.
 
-Keep workflow, roles, catalogs, navigation, start prompts, state, and templates consistent during maintenance. Preserve canonical metadata and main sections; update incoming links when moving a resource.
+Keep workflow, roles, catalogs, navigation, start prompts, state, and templates consistent during maintenance. Preserve canonical metadata and core section meanings; conditional sections follow their creation triggers. Document contract changes and migrations, and update incoming links when moving a resource.
 
 ## Execute the requested route
 
@@ -29,7 +29,7 @@ Keep workflow, roles, catalogs, navigation, start prompts, state, and templates 
 5. With ready W05 and a broader kit endpoint, read `method/sdd/workflow.md`, `roles.md`, `artifacts.md`, and `authoring-guide.md`; continue through W06–W12 up to the endpoint. Reuse early technical records and supported reviews.
 6. With an implementation endpoint and supported W12 readiness, follow I01–I02 through bounded code and actual verification. Follow I03 or I04 when included in the project's requested scope.
 7. For an external mode, use `method/handoff.md` and the receiving workflow's own phases and native templates.
-8. Register each concrete output, use its canonical source, save substantive definitions in their responsible documents, and update project state after meaningful work.
+8. Register each concrete output, use its canonical source, and save substantive definitions in their responsible documents. During PM, use the seven-file core or supported existing split sources; update changed state fields after meaningful work, check direct contradictions per answer, and reconcile affected sources and navigation at phase closure. Apply the complete PM review at W05.
 
 Recorded scope and delegation authorize subsequent routine work without repeated permission at each phase. Missing inputs or unsupported prerequisite reviews require their specific resolution. Adding a method capability does not authorize implementation or release in an unrelated initiative.
 
@@ -37,7 +37,7 @@ Ask one to three related questions per turn. Explain human and AI hats at transi
 
 ## Product ownership and profiles
 
-Shared product documents own behavior, scope, quality, and acceptance. Reusable UI remains framework-independent; interaction contracts remain transport-independent. PM records own evidence, hypotheses, objectives, risks, priorities, and investment decisions.
+Shared product documents own behavior, scope, quality, and acceptance, whether in the foundation or independently maintained definitions. Reusable UI remains framework-independent; interaction contracts remain transport-independent. PM records own evidence, hypotheses, objectives, risks, priorities, and investment decisions. Describe current alternatives when they affect the problem, scope, or expected improvement.
 
 Profiles own architecture, programming stack, ADRs, technical capabilities, delivery plans, operating guides, and conformance evidence. Multiple profiles reuse the same shared product definition. Keep technical limitations in their profile until a supported product decision changes behavior.
 
@@ -49,9 +49,9 @@ Use canonical profile and ADR schemas for early technical decisions when needed.
 
 Generate project root documents from `templates/project/`. Keep kit guides and source template directories external. Recalculate generated links using cataloged destinations and existing project outputs.
 
-Preserve canonical metadata keys, main sections, IDs, filenames, and status tokens. Assign the next unused number. Features and UI pages start as `draft`, ADRs as `proposed`, and enablers as `draft` unless instructions or evidence establish another status.
+Preserve canonical metadata keys, core section meanings, IDs, filenames, and status tokens. Omit unused conditional sections and add later-phase content when reached; preserve existing project history and definitions. Assign the next unused number. Features and UI pages start as `draft`, ADRs as `proposed`, and enablers as `draft` unless instructions or evidence establish another status.
 
-Use project state for the selected endpoint, mode, increment, intended profile, active W or I step, hats, artifacts, reviews, questions, and next action. Keep PM reviews per increment and baseline, and technical handoffs and verification per increment, profile, and revision.
+Use project state for the selected endpoint, mode, increment, intended profile, active W or I step, hats, actual artifacts, review references, blockers, and next action. State references the responsible definitions and questions. Keep each PM review once per increment and baseline, normally in the INC; link retained authoritative reviews elsewhere. Technical handoffs and verification retain their increment, profile, and revision context.
 
 Distinguish observations, hypotheses, proposals, decisions, authoring readiness, implementation, release, and observed outcomes. Leave unperformed checks and unsupported acceptance items unchecked.
 

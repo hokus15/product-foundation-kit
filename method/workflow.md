@@ -19,7 +19,7 @@ At W01, record the endpoint from instructions. A foundation-only request covers 
 
 | Target stage | Last kit step | Required result |
 | --- | --- | --- |
-| `pm-foundation` | W05 | Reviewed selected increment and PM handoff. |
+| `pm-foundation` | W05 | Selected increment with an authoritative PM review and next action. |
 | `product-specifications` | W09 | Specification review supported by SDD-READY-01–06. |
 | `implementation-plan` | W12 | Intended profile's BUILD-READY-01–05 review. |
 | `implementation` | I02 | Requested code and applicable executed verification against specifications. |
@@ -38,21 +38,23 @@ Work can iterate within these steps. New evidence changes its responsible defini
 
 During W02–W04, follow [technical discovery](technical-discovery.md) when a constraint, feasibility question, or consequential technical choice affects scope, cost, priority, or investment. Use its technical hats and [cataloged records](artifacts.md#conditional-technical-records), then return to the interrupted PM step. W05 carries the evidence and decisions into the handoff.
 
-The branch creates only needed investigations or profile decisions. It adds no mandatory architecture phase or full SDD planning sequence.
+The branch creates investigations or profile decisions needed for the current PM choice, then returns to the interrupted step.
 
 ## Completion and conversation rules
 
 Apply the hats in the role guide and explain their contributions at transitions. Ask for missing knowledge or decision authority only when it affects the next action; apply recorded delegation and reuse answers.
 
+For PM, follow the [bounded per-answer cycle](guide.md#each-conversation-turn): persist the new contribution, check direct contradictions, and update changed state fields. Reuse resources already read from the adopted revision within a session.
+
 Before completing a step:
 
-- Account for required outputs and applicable conditional outputs in project state.
+- Check its minimum content, using consolidated or existing split sources. Account for actual outputs in state; record conditional omissions when they affect readiness, a request, or downstream work.
 - Replace resolved prompts with factual content; retain specific open questions with impact, owner where known, and next action.
 - Reference sources or decisions supporting consequential definitions and identify hypotheses and proposals.
-- Review metadata, IDs, main sections, project links, and consistency with upstream sources.
+- Review applicable metadata, IDs, core sections, changed links, and consistency of affected sources. Reconcile navigation at phase closure; W05 reviews the whole selected increment.
 - Record the exit result and actual saved artifacts. File presence alone establishes no readiness or execution evidence.
 
-A conditional absence needs a reason. Deferral does not satisfy a required output. Keep the step active or blocked while its exit condition is unmet. Automated documentation checks run only when explicitly requested.
+Include applicable conditional sections. Phase completion requires its minimum content. A question blocks the phase only when its exit condition depends on the answer. Keep the step active or blocked while that condition is unmet. Automated documentation checks run only when explicitly requested.
 
 ## W00 — Source and workspace
 
@@ -76,11 +78,11 @@ A conditional absence needs a reason. Deferral does not satisfy a required outpu
 
 **Questions:** What working name should we use? Which conversation and document languages apply? What general rules should guide the assistant? Who can supply business knowledge and decide product or technical questions, and which choices can the AI make when delegated? Establish the endpoint and workflow mode from instructions; clarify ambiguous broader scope and use the kit route unless an external workflow is selected. Follow up only on unresolved conventions and authority.
 
-**Outputs:** generate or update `project-conventions.md`, `documentation-policy.md`, the project's README using its canonical source template, and `AGENTS.md` using the project agent template. Record the target stage, workflow mode, scope bounds, and decision context in `project-state.md`. Root documents contain initiative-specific rules and navigation.
+**Outputs:** generate or update `project-conventions.md`, README, and AGENTS from their canonical schemas. Conventions own one default documentation language and actual exceptions; retain a separate `documentation-policy.md` when existing or needed for independent maintenance. Record endpoint, mode, bounds, and changed working context in state. Root documents reference authoritative project sources.
 
-**Checks:** distinguish conversation language from document languages, preferences from mandatory constraints, and routine drafting from consequential choices. Keep unrelated platform and technology choices pending.
+**Checks:** distinguish conversation language from document languages, preferences from constraints, and routine drafting from consequential choices. Resolve language, participant, and tooling choices when they affect current work.
 
-**Exit:** identity may be provisional, but destination and conventions required for the next documents are known. Every relevant unresolved configuration choice has a next action.
+**Exit:** a provisional identity, destination, languages, working rules, and authority sufficient for discovery are known. Relevant unresolved configuration has a next action; future configuration does not block discovery.
 
 ## W02 — Problem, people, and context
 
@@ -88,11 +90,11 @@ A conditional absence needs a reason. Deferral does not satisfy a required outpu
 
 **Inputs:** the user's idea, known practice, and available observations or sources.
 
-**Questions:** What outcome would be useful? Who experiences the problem and how is it handled today? Can you describe a concrete case? Who uses the product, receives outputs, or decides scope?
+**Questions:** What need or problem justifies the product, who is affected, and what improvement would be useful? Ask about current practice only when it affects understanding the problem, scope, or improvement. Request an example or distinguish users from recipients when needed.
 
-**Outputs:** generate `pm/initiative.md`, `specs/product/vision.md`, `specs/product/actors.md`, and relevant glossary content from source blueprints and answers. Reference recorded method provenance in the brief when relevant. Create a research record only for an identifiable source or activity; generate indexes when their project content exists.
+**Outputs:** start `pm/initiative.md` with the problem and its basis, and `specs/product/foundation.md` with value, actors, and usage context. Existing vision and actor definitions can satisfy this content directly. Add vocabulary or research only when needed. Save supported later-phase facts in their responsible source and reuse them at W03–W04.
 
-**Checks:** separate observations from assumptions; distinguish product users from people represented in data. Keep detailed access rules pending if unknown. Maintain product purpose in vision and initiative objectives in the brief.
+**Checks:** attribute user knowledge and distinguish observations from assumptions. Distinguish users from people represented in data. Resolve access only when it affects current boundaries. Initiative owns problem evidence; the foundation references it and owns shared product value and actors.
 
 **Exit:** the problem, intended users, and desired improvement are understandable and supported by an attributed statement or source.
 
@@ -104,11 +106,11 @@ A conditional absence needs a reason. Deferral does not satisfy a required outpu
 
 **Questions:** What belongs in the initial product and what is excluded? Which capabilities support it? What would show success? Which quality conditions matter, and under what circumstances? Which imposed technical constraints or feasibility questions affect these boundaries?
 
-**Outputs:** `specs/product/scope.md`, `specs/product/capabilities.md`, `specs/product/quality-requirements.md`, and `pm/opportunities.md`; update the brief's objectives and vision where needed.
+**Outputs:** expand the foundation with scope, exclusions, capabilities, and applicable quality conditions; define initiative objectives and success signals. Use existing split definitions when present. Compare opportunities only when the decision requires it; separate documents follow catalog triggers.
 
-**Checks:** keep scope independent of implementation; distinguish future possibilities from commitments. Give each known quality requirement an observable condition and planned check. Unknown thresholds remain pending. Catalog order does not establish priority.
+**Checks:** keep scope independent of implementation and future possibilities distinct from commitments. Known quality requirements need observable conditions and planned checks; unknown thresholds remain pending. Use a qualitative or quantitative success signal supported by the available information.
 
-**Exit:** candidate outcomes have boundaries; applicable quality concerns and consequential unknowns are recorded.
+**Exit:** included capabilities and exclusions are understandable, objectives have observable success signals, and applicable quality conditions and consequential unknowns are recorded. If no additional quality concerns are identified, record that assessment briefly.
 
 ## W04 — Evidence, risks, and priorities
 
@@ -118,11 +120,11 @@ A conditional absence needs a reason. Deferral does not satisfy a required outpu
 
 **Questions:** Which assumption could change the decision to build? What needs investigation? Which outcome should come first, and why? Which dependencies or costs affect that choice? Does a technical assumption need evidence or a scoped decision before selecting the increment?
 
-**Outputs:** `pm/risks.md`, `pm/priorities.md`, `pm/roadmap.md`, and an `INC-NNN` record for the selected increment. Create `RES-NNN`, `VAL-NNN`, and `DEC-NNN` records only under their catalog conditions; update their indexes. When needed, use the technical branch's investigation and profile records without producing a complete delivery plan.
+**Outputs:** create the selected `INC-NNN` with outcome, boundaries, selection rationale, and evaluation approach. Record applicable risk and candidate comparisons in the initiative; reference them from the increment. A separate risk register, priority list, or roadmap is conditional on independent maintenance needs. RES, VAL, DEC, and technical discovery retain their catalog triggers; indexes are conditional on useful navigation.
 
-**Checks:** record the selected increment's outcome, bounds, rationale, dependencies, and evaluation approach. Keep a proposed experiment distinct from execution and a proposal distinct from an accepted choice.
+**Checks:** identify actual dependencies and decision-relevant uncertainty. Use qualitative rationale and outcome assessment when sufficient; add quantitative estimates when supported and needed for the decision. Keep experiments separate from execution and proposals from selection.
 
-**Exit:** a bounded increment is selected by an explicit instruction, decision, or delegated choice. Discovery actions address questions blocking its definition.
+**Exit:** a bounded increment is selected by an explicit instruction, decision, or delegated choice, with its rationale, observation method, and review condition or timing recorded. Questions blocking selection or definition are resolved; remaining uncertainties have their impact and next action in the responsible source.
 
 ## W05 — PM-to-SDD review
 
@@ -130,11 +132,11 @@ A conditional absence needs a reason. Deferral does not satisfy a required outpu
 
 **Inputs:** the selected increment and its product and PM sources.
 
-**Questions:** Are its outcome and boundaries consistent with the user's intent? Which open question prevents specification? Resolve specific disagreements rather than requesting approval for each document.
+**Questions:** Are its outcome and boundaries consistent with the user's intent? Which open question prevents specification? Resolve specific disagreements within recorded authority.
 
-**Outputs:** `pm/sdd-handoff.md` with reviewed source references and baseline, PM readiness, open questions, and downstream selection or pending next action; preserve the increment's review in its `INC-NNN` record; update state. Record concrete mappings and transfer progress only when downstream work is requested, using the [integration procedure](handoff.md#transfer-procedure).
+**Outputs:** record the authoritative review in the selected INC, with baseline, criterion evidence, result, and next action. Preserve earlier baselines and reference the authoritative review source. State links this review; reconcile root navigation. Generate a separate `pm/sdd-handoff.md` only when a receiving workflow or participant needs transfer records or mappings, using the [integration procedure](handoff.md#transfer-procedure).
 
-**Checks:** review PM-SDD-01 through PM-SDD-07 from the handoff document, recording sources and unanswered criteria. Keep product authority independent of tool-native technical artifacts. Include existing technical evidence, constraints, and profile decisions. Record the impact of unresolved feasibility questions; architecture, stack, and receiving-tool selection are conditional rather than universal readiness requirements.
+**Checks:** apply PM-SDD-01–07 from the [increment template](../templates/pm/increment.md) to the full selected scope. Record supporting sources and unsupported criteria once. Keep product authority independent of tool-native artifacts and include relevant early technical context. Record the consequence and resolution of feasibility uncertainty relevant to the review.
 
 **Exit:** record `ready`, `needs-discovery`, or `cancelled` with its basis. With `needs-discovery`, return to the relevant unresolved step; with `cancelled`, retain the rationale and stop that increment. At a PM endpoint, report the result and next action. With `ready` and broader kit scope, continue at W06 without an extra routine approval. With external mode, transfer to its recorded receiving workflow.
 

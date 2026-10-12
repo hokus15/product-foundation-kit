@@ -1,18 +1,19 @@
 # PM authoring schemas
 
-Read these inputs as their [catalog conditions](../../method/artifacts.md) apply.
+The [PM catalog](../../method/artifacts.md) owns destinations and triggers. The default core is an initiative and selected increment, with a shared product [foundation](../product/foundation.md).
 
-| Schema | Purpose |
+| Schema | Use |
 | --- | --- |
-| [Initiative](initiative.md) | Problem, alternatives, objectives, sponsorship, and constraints. |
-| [Opportunities](opportunities.md) | Needs and desired outcomes. |
-| [Risks](risks.md) | Uncertainty, impact, and next action. |
-| [Priorities](priorities.md) | Order and rationale. |
-| [Roadmap](roadmap.md) | Outcome-oriented increments. |
-| [Increment](increment.md) | Selected bounded outcome and evaluation. |
-| [Research](research.md) | Attributed evidence and known limits. |
-| [Validation](validation.md) | Hypothesis, proposed check, and actual findings when performed. |
-| [Decision](decision.md) and [decision index](decisions.md) | Consequential choices and history. |
-| [Handoff](sdd-handoff.md) | PM review and portable transfer. |
+| [Initiative](initiative.md) | Core: problem and its basis, objectives, and constraints. Add current practice only when decision-relevant; hypotheses, opportunities, risks, and comparisons are conditional. |
+| [Increment](increment.md) | Core at W04: bounded outcome, selection, and evaluation. Owns the W05 PM review by default; actual outcomes follow later evidence. |
+| [Opportunities](opportunities.md) | Conditional independently maintained opportunity map. |
+| [Risks](risks.md) | Conditional independently maintained risk register. |
+| [Priorities](priorities.md) | Conditional independently maintained candidate ordering. |
+| [Roadmap](roadmap.md) | Conditional maintained sequence of multiple increments. |
+| [Research](research.md) | Identifiable source or activity informs a decision; planned work has no findings. |
+| [Validation](validation.md) | Consequential hypothesis needs an agreed or delegated check; distinguish planned from executed. |
+| [Decision](decision.md) | Consequential choice needs a separate rationale or supersession record. |
+| [Decision index](decisions.md) | Conditional useful navigation to DEC records. |
+| [Transfer](sdd-handoff.md) | Receiving workflow or participant needs a separate mapping or transfer record; references the authoritative PM review. |
 
-[Index schemas](indexes/pm.md) generate project navigation around existing records. Preserve canonical metadata, stable IDs, section meanings, and status tokens. Apply project language choices and separate hypotheses, proposals, and executed findings.
+[Index schemas](indexes/pm.md) are conditional navigation aids, not required for each folder. Preserve identifiers and metadata, apply language choices, and include only applicable sections. Use the authoritative definition and review sources recorded for the project.

@@ -6,6 +6,8 @@ Read the [authoring guide](authoring-guide.md), [working roles](roles.md), and [
 
 W06–W09 define shared behavior and acceptance. W10–W12 create the intended profile's technical plan and handoff. I01–I04 implement, verify, release, and review outcomes within the recorded endpoint and scope. Reuse supported reviews and early decisions; update project state with the active W or I step, hats, increment, profile, artifacts, evidence, and next action.
 
+Read the actual PM sources: a consolidated product foundation or retained/extracted definitions, and the selected INC's authoritative PM review or its retained source. Conventions own language choices unless a separate existing policy owns them. W06–W12 and I01–I04 retain their own output and review requirements.
+
 ## Shared definition and implementation profiles
 
 Define product behavior independently of implementation architecture and programming stack. W02–W09 build the shared product foundation, reusable UI, and transport-independent contracts. W10–W12 map that definition to a specific architecture profile.
@@ -30,7 +32,7 @@ Use an explicitly requested profile for the task; otherwise resolve the active c
 
 **Questions:** What triggers the process? Which concepts, relationships, states, decisions, exceptions, and calculations determine its outcome? Which rules are shared? Which external criteria constrain them?
 
-**Outputs:** relevant glossary updates, an applicable `specs/product/domain/model.md`, `PROC-NNN` process documents, and shared `BR-NNN` rules. Record omitted conditional domain outputs and their reasons in project state. Create `domain/regulatory-decisions.yaml` when a changing external criterion constrains a rule. Update the process and rule indexes.
+**Outputs:** update vocabulary in its actual owning foundation or glossary source; create an applicable domain model, PROC processes, and shared BR rules. Record omitted conditional domain outputs and their reasons in project state. Create `domain/regulatory-decisions.yaml` when a changing external criterion constrains a rule. Update the process and rule indexes.
 
 **Checks:** use the cataloged process and rule templates. Attribute rules to product decisions or sources; do not infer business behavior from a technical preference. Keep unreviewed external sources pending. Explain when entities, persistent state, or shared rules do not apply.
 
@@ -44,7 +46,7 @@ Use an explicitly requested profile for the task; otherwise resolve the active c
 
 **Questions:** Which bounded behaviors realize the outcome? What are their actors, preconditions, success results, failure paths, and edge cases? What examples would distinguish correct behavior?
 
-**Outputs:** one or more `specs/product/features/FEAT-NNN-short-description.md` documents using the canonical Feature template; update the Feature index and capability navigation.
+**Outputs:** one or more `specs/product/features/FEAT-NNN-short-description.md` documents using the canonical Feature template; update the Feature index and capability navigation in its owning foundation or capability document.
 
 **Checks:** preserve template fields and section meanings; use stable RF, CU, and AC identifiers within each Feature. Reference existing shared rules. Keep optional UI and contract references empty until those documents exist. Explain non-applicable sections and retain unsupported Definition of Done items unchecked.
 
@@ -152,7 +154,7 @@ Proceed when release is explicitly requested or included in the authorized task.
 
 **Working hats:** Human — Product Owner; AI — Product Manager.
 
-Use the increment's evaluation plan and actual observations. Record the observed outcome and subsequent decision in its increment record; update risks, priorities, and roadmap as supported. Another increment returns to W04; another architecture profile of the same specified scope returns to W10 with supported reviews.
+Use the increment's evaluation plan and actual observations. Record the observed outcome and subsequent decision in its increment record; update relevant risk and priority content in the initiative or extracted records, and an existing roadmap when applicable. Another increment returns to W04; another architecture profile of the same specified scope returns to W10 with supported reviews.
 
 ## Completion of execution activities
 
